@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        /*공용 코드*/
+        body{
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+        }
+        ul{
+            font-size: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        /*header 코드*/
+        header{
+            position: relative;
+            z-index: 1;
+            background-color: #252631;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            box-shadow: 0 7px 5px -3px rgba(0, 0, 0, .2);
+        }
+        header ul{
+            display: flex;
+            font-size: 1rem;
+        }
+        .hd-util li{
+            margin-right: 2rem;
+        }
+        .hd-util li:last-child{
+            margin-right: 0;
+        }
+        .hd-util a{
+            color: #fff;
+        }
+        .hd-util a>span{
+            color: #89B8FF;
+        }
+        /*main 코드*/
+        main{
+            background-color: #D6E5ED;
+        }
+        /*nav 코드*/
+        nav{
+            display: inline-block;
+            background-color: #252631;
+        }
+        nav ul{
+            width: 12rem;
+            padding: 1rem 0 0 0;
+        }
+        nav li{
+            padding: 1rem 2rem;
+        }
+        .nav-selected{
+            background-color: #5574C6;
+            box-shadow: inset 0 3px 4px rgba(0, 0, 0, .2);
+        }
+        nav a{
+            font-size: 1.3rem;
+            color: #fff;
+        }
+        /*footer 코드*/
+        footer{
+            padding: 2rem 0;
+            font-size: .8rem;
+            text-align: center;
+            box-shadow: 0 -3px 5px rgba(0, 0, 0, .05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-box">
+            <a href="#">
+                <img src="./imgs/header/cuo-logo.png" alt="" class="logo">
+            </a>
+        </div>
+        <div class="hd-util">
+            <ul>
+                <li><a href="#"><span>김태훈</span>님</a></li>
+                <li><a href="#">로그아웃</a></li>
+                <li><a href="#">개인정보수정</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li class="nav-list"><a href="#" class="nav-link">전체분석</a></li>
+                <li class="nav-list nav-ai">
+                    <a href="#" class="nav-link">
+                        앨범정보
+                    </a>
+                </li>
+                <li class="nav-depth">
+                    <div class="nav-depth-contents">
+                        <ul>
+                            <li class="nav-depth-list"><a href="#" class="album-link">전체 앨범</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">허공에 묻는다</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">Insane</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">엊그제</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">Own Star</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">모래성</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-list"><a href="#" class="nav-link">정산관리</a></li>
+                <li class="nav-list"><a href="#" class="nav-link">공지사항</a></li>
+            </ul>
+        </nav>
+
+    </main>
+    <footer>
+        <h3 class="license">COPYRIGHTS © 2019 MUSICGATE</h3>
+    </footer>
+    <script>
+        //nav 스크립트
+        $('.nav-ai').on('click', function() {
+            $('.nav-depth').slideToggle(200);
+        });
+        $('.nav-depth-list').on('mouseover', function(){
+            $('.nav-depth-list').removeClass('nav-depth-list-selected');
+            $(this).addClass('nav-depth-list-selected');
+        });
+        $('.nav-depth-list').on('mouseleave', function(){
+            $('.nav-depth-list').removeClass('nav-depth-list-selected');
+        });
+        
+    </script>
+</body>
+</html>

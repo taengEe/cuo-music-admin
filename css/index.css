@@ -1,0 +1,435 @@
+.hd-mb-util{
+    display: none;
+}
+.nav-album-list-box{
+    display: none;
+}
+.nav-setting-box{
+    display: none;
+}
+.hd-mb-util>button{
+    background-color: transparent;
+    border: none;
+}
+.hd-mb-util img{
+    width: 20px;
+    cursor: pointer;
+}
+.sc-tt{
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #2B405F;   
+}
+.analy{
+    overflow-x: hidden !important;
+}
+.analy-box{
+    display: flex;
+    justify-content: space-between;
+}
+.analy-box>div{
+    flex-grow: 1;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 2rem;
+    margin-right: 2rem;
+}
+.by-date{
+    margin: 0 !important;
+}
+.tb-date{
+    display: none;
+}
+.sub-sc-tt{
+    font-size: 1.2rem;
+    color: #2B405F;
+    margin-bottom: 2rem;
+}
+.chart-box{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.other-box{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.other-box>div{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+}
+.best-seller{
+    
+    margin-right: 2rem;
+}
+.notice{
+    flex-grow: 2;
+}
+.best-seller thead{
+    border-bottom: 1px solid #D6E5ED;
+}
+.best-seller thead td{
+    color: #2B405F;
+    padding: .5rem 1rem .5rem 0;
+}
+.best-seller thead td:last-child{
+    padding: .5rem 0 .5rem 1rem;
+}
+.album-name{
+    width: 300px;
+    padding: .5rem 1rem .5rem 0;
+}
+.album-name>a,
+.best-hit>a{
+    font-size: .9rem;
+}
+.album-name>a{
+    color: #333;
+}
+.best-hit>a{
+    padding: .5rem 0 .5rem 1rem;
+    color: #888;
+}
+.notice table{
+    width: 100%;
+}
+.notice thead{
+    border-bottom: 1px solid #D6E5ED;
+}
+.notice th{
+    font-size: 1rem;
+    color: #2B405F;
+    padding-bottom: 1rem;
+}
+.notice tbody td{
+    text-align: center;
+    padding: .5rem 1rem;
+    font-size: .9rem;
+}
+@media (min-width: 1024px){
+    nav{
+        display: block;
+    }
+    .mb-util-box,
+    .hd-mb-util{
+        display: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px){
+    header{
+        position: sticky;
+        top: 0;
+    }
+    .hd-mb-util{
+        display: block;
+    }
+    .hd-util{
+        display: none;
+    }
+    main{
+        position: relative;
+    }
+    .analy-box{
+        flex-direction: column;
+    }
+    nav{
+        display: none;
+        position: fixed;
+        top: 103px;
+        right: 0;
+        width: 90%;
+        height: 100vh;
+        z-index: 10;
+    }
+    nav>ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    nav ul>li{
+        flex-grow: 1;
+        width: 50%;
+    }
+    .nav-depth-list{
+        width: 100%;
+    }
+    .nav-album-list-box{
+        border-radius: 10px;
+        display: block;
+        margin: 1rem;
+        padding: 1rem;
+        background-color: #525D79;
+    }
+    .nav-album-list-box>ul{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .nav-album-list-box li{
+        width: 50%;
+        padding-bottom: 1rem;
+    }
+    .nav-album-list-box li:last-child,
+    .nav-album-list-box li:nth-child(3){
+        padding-bottom: 0;
+    }
+    .nav-album-list-box a{
+        font-size: 1rem;
+    }
+    .nav-setting-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 35vh;
+        margin: 1rem;
+    }
+    .nav-setting-box li{
+        display: inline-block;
+    }
+    .mb-util-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 10px;
+        margin: 1rem 1rem;
+        background-color: #2B405F;
+        padding: 1rem;
+        text-align: center;
+    }
+    .mb-util{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        padding-bottom: 1rem;
+    }
+    .mb-util>img{
+        margin-right: .5rem;
+    }
+    .mb-util>span{
+        color: #89B8FF;
+    }
+    .mb-sub-util{
+        display: flex;
+        justify-content: space-around;
+        font-size: .6rem;
+        border-top: 1px solid rgba(255,255,255,.5);
+        padding-top: 1rem;
+        
+    }
+    .mb-sub-util a{
+        font-size: 1rem;
+    }
+    .analy-box{
+        flex-direction: row !important;
+        flex-wrap: wrap;
+    }
+    .analy-box>div{
+        margin-bottom: 2rem;
+    }
+    .by-seller{
+        margin-right: 2rem;
+    }
+    .by-album{
+        margin-right: 0 !important;
+    }
+    .by-seller,
+    .by-album{
+        width: 30%;
+    }
+    .by-date{
+        display: none;
+    }
+    .tb-date{
+        display: block;
+        flex-grow: 2;
+        margin: 0 !important;
+    }
+    .sub-sc-tt{
+        font-size: 1rem;
+    }
+    .chart-box{
+        position: relative;
+        width: 10px;
+        height: 10px;
+    }
+    .other-box{
+        
+    }
+    .other-box>div{
+        margin: 0 0 2rem 0;
+    }
+    .best-seller{
+        margin-right: 2rem !important;
+    }
+    .notice tbody td{
+        
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .notice tbody td>a{
+        color: #333;
+    }
+}
+@media (max-width: 767px) {
+    header{
+        position: sticky;
+        top: 0;
+    }
+    .hd-mb-util{
+        display: block;
+    }
+    .hd-util{
+        display: none;
+    }
+    main{
+        position: relative;
+    }
+    .analy-box{
+        flex-direction: column;
+    }
+    nav{
+        display: none;
+        position: fixed;
+        top: 103px;
+        right: 0;
+        width: 90%;
+        height: 100vh;
+        z-index: 10;
+    }
+    nav>ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    nav ul>li{
+        flex-grow: 1;
+        width: 50%;
+    }
+    .nav-depth-list{
+        width: 100%;
+    }
+    .nav-album-list-box{
+        border-radius: 10px;
+        display: block;
+        margin: 1rem;
+        padding: 1rem;
+        background-color: #525D79;
+    }
+    .nav-album-list-box>ul{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .nav-album-list-box li{
+        width: 50%;
+        padding-bottom: 1rem;
+    }
+    .nav-album-list-box li:last-child,
+    .nav-album-list-box li:nth-child(3){
+        padding-bottom: 0;
+    }
+    .nav-album-list-box a{
+        font-size: 1rem;
+    }
+    .nav-setting-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 35vh;
+        margin: 1rem;
+    }
+    .nav-setting-box li{
+        display: inline-block;
+    }
+    .mb-util-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 10px;
+        margin: 1rem 1rem;
+        background-color: #2B405F;
+        padding: 1rem;
+        text-align: center;
+    }
+    .mb-util{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        padding-bottom: 1rem;
+    }
+    .mb-util>img{
+        margin-right: .5rem;
+    }
+    .mb-util>span{
+        color: #89B8FF;
+    }
+    .mb-sub-util{
+        display: flex;
+        justify-content: space-around;
+        font-size: .6rem;
+        border-top: 1px solid rgba(255,255,255,.5);
+        padding-top: 1rem;
+        
+    }
+    .mb-sub-util a{
+        font-size: 1rem;
+    }
+    .analy{
+        padding: 1rem !important;
+        width: 100%;
+        overflow-x: hidden !important;
+    }
+    .analy-box>div{
+        margin: 0 0 2rem 0;
+        padding: 1rem !important;
+        padding-bottom: 2rem;
+    }
+    .tb-date{
+        display: none;
+    }
+    .sub-sc-tt{
+        font-size: 1rem;
+    }
+    .chart-box{
+        position: relative;
+        width: 10px;
+        height: 10px;
+    }
+    .best-seller table{
+        width: 100%;
+        text-align: center;
+    }
+    .other-box{
+        flex-direction: column;
+    }
+    .other-box>div{
+        margin: 0 0 2rem 0;
+    }
+    .notice{
+        overflow-x: hidden;
+    }
+    .notice tbody td{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .notice a{
+        color: #333;
+    }
+    .m-display-none{
+        display: none;
+        border: 1px solid red;
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header-nav-footer.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-box">
+            <a href="#">
+                <img src="./imgs/header/cuo-logo.png" alt="" class="logo">
+            </a>
+        </div>
+        <div class="hd-util">
+            <ul>
+                <li><a href="#"><span>김태훈</span>님</a></li>
+                <li><a href="#">로그아웃</a></li>
+                <li><a href="#">개인정보수정</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li class="nav-list"><a href="./index.html" class="nav-link">전체분석</a></li>
+                <li class="nav-list nav-ai">
+                    <a href="#" class="nav-link">
+                        앨범정보
+                    </a>
+                </li>
+                <li class="nav-depth">
+                    <div class="nav-depth-contents">
+                        <ul>
+                            <li class="nav-depth-list"><a href="./album-info.html" class="album-link" style="color: #FFFCBE;">전체 앨범</a></li>
+                            <li class="nav-depth-list"><a href="./album-detail.html" class="album-link" style="color: #FFFCBE;">허공에 묻는다</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">Insane</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">엊그제</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">Own Star</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">모래성</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-list"><a href="./calc.html" class="nav-link">정산관리</a></li>
+                <li class="nav-list"><a href="./notice.html" class="nav-link">공지사항</a></li>
+            </ul>
+        </nav>
+
+    </main>
+    <footer>
+        <h3 class="license">COPYRIGHTS © 2019 MUSICGATE</h3>
+    </footer>
+    <script>
+        
+        //nav 스크립트
+        $('.nav-ai').on('click', function() {
+            $('.nav-depth').slideToggle(200);
+        });
+        $('.nav-depth-list').on('mouseover mouseleave', function() {
+            $('.nav-depth-list').removeClass('nav-depth-list-selected');
+            $(this).toggleClass('nav-depth-list-selected');
+        });
+    </script>
+</body>
+</html>

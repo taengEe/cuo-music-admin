@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuo 뮤직 정산관리</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/hnf.css">
+    <link rel="stylesheet" href="./css/calc.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-box">
+            <a href="#">
+                <img src="./imgs/header/cuo-logo.png" alt="" class="logo">
+            </a>
+        </div>
+        <div class="hd-util">
+            <ul>
+                <li><a href="#"><span>김태훈</span>님</a></li>
+                <li><a href="#">로그아웃</a></li>
+                <li><a href="#">개인정보수정</a></li>
+            </ul>
+        </div>
+        <div class="hd-mb-util">
+            <button type="button" class="mb-btn"><img src="./imgs/mobile/nav-mb-btn.png" alt=""></button>
+        </div>
+    </header>
+    <main>
+        <nav>
+            <div class="mb-util-box">
+                <a href="#" class="mb-util"><img src="./imgs/mobile/mb-pt.png" alt=""><span>김태훈</span>님</a>
+                <div class="mb-sub-util">
+                    <a href="#">로그아웃</a>
+                    <a href="#" style="padding: 0;">개인정보 수정</a>
+                </div>
+                <!-- <ul>
+                    <li></li>
+                    <li><a href="#" class="mb-util">로그아웃</a></li>
+                    <li><a href="#" class="mb-util" style="padding: 0;">개인정보 수정</a></li>
+                </ul> -->
+            </div>
+            <ul>
+                <li class="nav-list"><a href="http://davylamp1.dothome.co.kr/admin/index.html" class="nav-link">전체분석</a></li>
+                <li class="nav-list nav-ai">
+                    <a href="#" class="nav-link">
+                        앨범정보
+                    </a>
+                </li>
+                <li class="nav-depth">
+                    <div class="nav-depth-contents">
+                        <ul>
+                            <li class="nav-depth-list"><a href="#" class="album-link">전체 앨범</a></li>
+                            <li class="nav-depth-list"><a href="http://davylamp1.dothome.co.kr/admin/album-detail.html" class="album-link" style="color: #FFFCBE;">허공에 묻는다</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">Insane</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">엊그제</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">Own Star</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">모래성</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-list"><a href="http://davylamp1.dothome.co.kr/admin/calc.html" class="nav-link">정산관리</a></li>
+            </ul>
+            <div class="nav-album-list-box">
+                <ul>
+                    <li><a href="#" class="nav-album-list">허공에 묻는다</a></li>
+                    <li><a href="#" class="nav-album-list">Insane</a></li>
+                    <li><a href="#" class="nav-album-list">엊그제</a></li>
+                    <li><a href="#" class="nav-album-list">Own Star</a></li>
+                </ul>
+            </div>
+            <div class="nav-setting-box">
+                <ul>
+                    <li><a href="#">설정</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="calculate">
+            <h2 class="section-tt">정산 관리</h2>
+            <div class="calculate-resolute">
+                <div class="by-sales">
+                    <h3 class="section-sub-tt">판매사별 판매현황</h3>
+                    <div class="calculate-graph chart">
+                        <canvas id="sales-graph" height="300"></canvas>
+                    </div>
+                    <div class="sales-table-box">
+                        <table class="sales-table">
+                            <thead>
+                                <th>판매사</th>
+                                <th>스트리밍 수량</th>
+                                <th>다운로드 수량</th>
+                                <th>매출액</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="sales-table-sub-tt">Melon</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">200</td>
+                                </tr>
+                                <tr>
+                                    <td class="sales-table-sub-tt">Genie</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">200</td>
+                                </tr>
+                                <tr>
+                                    <td class="sales-table-sub-tt">Bugs</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">200</td>
+                                </tr>
+                                <tr>
+                                    <td class="sales-table-sub-tt">Flo</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">200</td>
+                                </tr>
+                                <tr>
+                                    <td class="sales-table-sub-tt">Vibe</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">200</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="by-album">
+                    <h3 class="section-sub-tt">앨범별 누계현황</h3>
+                    <div class="calculate-graph chart">
+                        <canvas id="album-graph" height="300"></canvas>
+                    </div>
+                    <div class="sales-table-box">
+                        <table class="sales-table">
+                            <thead>
+                                <th>앨범명</th>
+                                <th>스트리밍 수량</th>
+                                <th>다운로드 수량</th>
+                                <th>매출액</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="sales-table-sub-tt">허공에 묻는다</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">200</td>
+                                </tr>
+                                <tr>
+                                    <td class="sales-table-sub-tt">Insane</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">200</td>
+                                </tr>
+                                <tr>
+                                    <td class="sales-table-sub-tt">엊그제</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">200</td>
+                                </tr>
+                                <tr>
+                                    <td class="sales-table-sub-tt">Own Star</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">200</td>
+                                </tr>
+                                <tr>
+                                    <td class="sales-table-sub-tt">모래성</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">200</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="by-period">
+                    <h3 class="section-sub-tt">기간별 판매현황</h3>
+                    <div class="calculate-graph chart">
+                        <canvas id="period-graph" height="300"></canvas>
+                    </div>
+                    <div class="sales-table-box">
+                        <table class="sales-table">
+                            <thead>
+                                <th>기간</th>
+                                <th>스트리밍 수량</th>
+                                <th>다운로드 수량</th>
+                                <th>매출액</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="sales-table-sub-tt">2023-05</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">200</td>
+                                </tr>
+                                <tr>
+                                    <td class="sales-table-sub-tt">2023-06</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">200</td>
+                                </tr>
+                                <tr>
+                                    <td class="sales-table-sub-tt">2023-07</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">200</td>
+                                </tr>
+                                <tr>
+                                    <td class="sales-table-sub-tt">2023-08</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">200</td>
+                                </tr>
+                                <tr>
+                                    <td class="sales-table-sub-tt">2023-09</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">100</td>
+                                    <td class="quantity">200</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h3 class="license">COPYRIGHTS © 2019 MUSICGATE</h3>
+    </footer>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/calc.js"></script>
+</body>
+</html>

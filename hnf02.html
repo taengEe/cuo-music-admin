@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/hnf.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        main{
+            height: 40vh;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-box">
+            <a href="#">
+                <img src="./imgs/header/cuo-logo.png" alt="" class="logo">
+            </a>
+        </div>
+        <div class="hd-util">
+            <ul>
+                <li><a href="#"><span>김태훈</span>님</a></li>
+                <li><a href="#">로그아웃</a></li>
+                <li><a href="#">개인정보수정</a></li>
+            </ul>
+        </div>
+        <div class="hd-mb-util">
+            <button type="button" class="mb-btn"><img src="./imgs/mobile/nav-mb-btn.png" alt=""></button>
+        </div>
+    </header>
+    <main>
+        <nav>
+            <div class="mb-util-box">
+                <a href="#" class="mb-util"><img src="./imgs/mobile/mb-pt.png" alt=""><span>김태훈</span>님</a>
+                <div class="mb-sub-util">
+                    <a href="#">로그아웃</a>
+                    <a href="#" style="padding: 0;">개인정보 수정</a>
+                </div>
+                <!-- <ul>
+                    <li></li>
+                    <li><a href="#" class="mb-util">로그아웃</a></li>
+                    <li><a href="#" class="mb-util" style="padding: 0;">개인정보 수정</a></li>
+                </ul> -->
+            </div>
+            <ul>
+                <li class="nav-list"><a href="#" class="nav-link">전체분석</a></li>
+                <li class="nav-list nav-ai">
+                    <a href="#" class="nav-link">
+                        앨범정보
+                    </a>
+                </li>
+                <li class="nav-depth">
+                    <div class="nav-depth-contents">
+                        <ul>
+                            <li class="nav-depth-list"><a href="#" class="album-link" style="color: #FFFCBE;">전체 앨범</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link" style="color: #FFFCBE;">허공에 묻는다</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">Insane</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">엊그제</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">Own Star</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">모래성</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-list"><a href="#" class="nav-link">정산관리</a></li>
+                <li class="nav-list"><a href="#" class="nav-link">공지사항</a></li>
+            </ul>
+            <div class="nav-album-list-box">
+                <ul>
+                    <li><a href="#" class="nav-album-list">허공에 묻는다</a></li>
+                    <li><a href="#" class="nav-album-list">Insane</a></li>
+                    <li><a href="#" class="nav-album-list">엊그제</a></li>
+                    <li><a href="#" class="nav-album-list">Own Star</a></li>
+                </ul>
+            </div>
+            <div class="nav-setting-box">
+                <ul>
+                    <li><a href="#">설정</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </div>
+        </nav>
+    </main>
+    <footer>
+        <h3 class="license">COPYRIGHTS © 2019 MUSICGATE</h3>
+    </footer>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        //nav 스크립트
+        $('.nav-ai').on('click', function() {
+            $('.nav-depth').slideToggle(200);
+        });
+        $('.nav-depth-list').on('mouseover mouseleave', function() {
+            $('.nav-depth-list').removeClass('nav-depth-list-selected');
+            $(this).toggleClass('nav-depth-list-selected');
+        });
+        //mobile
+        $(document).ready(function() {
+            $('.mb-btn').click(function() {
+                $('nav').toggle('slide', { direction: 'right' }, 200);
+            });
+        });
+    </script>
+</body>
+</html>

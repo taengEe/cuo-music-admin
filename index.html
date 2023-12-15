@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuo 뮤직 어드민 페이지</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/hnf.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-box">
+            <a href="#">
+                <img src="./imgs/header/cuo-logo.png" alt="" class="logo">
+            </a>
+        </div>
+        <div class="hd-util">
+            <ul>
+                <li><a href="#"><span>김태훈</span>님</a></li>
+                <li><a href="#">로그아웃</a></li>
+                <li><a href="#">개인정보수정</a></li>
+            </ul>
+        </div>
+        <div class="hd-mb-util">
+            <button type="button" class="mb-btn"><img src="./imgs/mobile/nav-mb-btn.png" alt=""></button>
+        </div>
+    </header>
+    <main>
+        <nav>
+            <div class="mb-util-box">
+                <a href="#" class="mb-util"><img src="./imgs/mobile/mb-pt.png" alt=""><span>김태훈</span>님</a>
+                <div class="mb-sub-util">
+                    <a href="#">로그아웃</a>
+                    <a href="#" style="padding: 0;">개인정보 수정</a>
+                </div>
+            </div>
+            <ul>
+                <li class="nav-list"><a href="http://davylamp1.dothome.co.kr/admin/index.html" class="nav-link">전체분석</a></li>
+                <li class="nav-list nav-ai">
+                    <a href="#" class="nav-link">
+                        앨범정보
+                    </a>
+                </li>
+                <li class="nav-depth">
+                    <div class="nav-depth-contents">
+                        <ul>
+                            <li class="nav-depth-list"><a href="#" class="album-link">전체 앨범</a></li>
+                            <li class="nav-depth-list"><a href="http://davylamp1.dothome.co.kr/admin/album-detail.html" class="album-link" style="color: #FFFCBE;">허공에 묻는다</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">Insane</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">엊그제</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">Own Star</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">모래성</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-list"><a href="http://davylamp1.dothome.co.kr/admin/calc.html" class="nav-link">정산관리</a></li>
+            </ul>
+            <div class="nav-album-list-box">
+                <ul>
+                    <li><a href="#" class="nav-album-list">허공에 묻는다</a></li>
+                    <li><a href="#" class="nav-album-list">Insane</a></li>
+                    <li><a href="#" class="nav-album-list">엊그제</a></li>
+                    <li><a href="#" class="nav-album-list">Own Star</a></li>
+                </ul>
+            </div>
+            <div class="nav-setting-box">
+                <ul>
+                    <li><a href="#">설정</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="analy">
+            <h2 class="sc-tt">전체분석</h2>
+            <div class="analy-box">
+                <div class="by-seller">
+                    <h3 class="sub-sc-tt">판매사별 분석</h3>
+                    <div class="chart-box" style="position: relative; height:40vh; width:20vw">
+                        <canvas id="seller"></canvas>
+                    </div>
+                </div>
+                <div class="by-album">
+                    <h3 class="sub-sc-tt">앨범별 분석</h3>
+                    <div class="chart-box" style="position: relative; height:40vh; width:20vw">
+                        <canvas id="album"></canvas>
+                    </div>
+                </div>
+                <div class="by-date">
+                    <h3 class="sub-sc-tt">기간별 분석</h3>
+                    <div class="chart-box" style="position: relative; height:40vh; width:20vw">
+                        <canvas id="date" height="350"></canvas>
+                    </div>
+                </div>
+                <div class="tb-date">
+                    <h3 class="sub-sc-tt">기간별 분석</h3>
+                    <div class="chart-box" style="position: relative; height:40vh; width:20vw">
+                        <canvas id="tb-date"height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="other-box">
+                <div class="best-seller">
+                    <h2 class="sub-sc-tt">최다 판매 앨범</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>앨범명</td>
+                                <td>HIT</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="album-name"><a href="#">허공에 묻는다</a></td>
+                                <td class="best-hit"><a href="#">1007</a></td>
+                            </tr>
+                            <tr>
+                                <td class="album-name"><a href="#">엊그제</a></td>
+                                <td class="best-hit"><a href="#">745</a></td>
+                            </tr>
+                            <tr>
+                                <td class="album-name"><a href="#">Insane</a></td>
+                                <td class="best-hit"><a href="#">678</a></td>
+                            </tr>
+                            <tr>
+                                <td class="album-name"><a href="#">Own Star</a></td>
+                                <td class="best-hit"><a href="#">565</a></td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+                <div class="notice">
+                    <h2 class="sub-sc-tt">공지사항</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>NO.</th>
+                                <th>TITLE</th>
+                                <th>DATE</th>
+                                <th class="m-display-none">HIT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">5</a></td>
+                                <td><a href="#">2023년 9월 정산 안내</a></td>
+                                <td><a href="#">2023-09-25</a></td>
+                                <td class="m-display-none"><a href="#">100</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">4</a></td>
+                                <td><a href="#">2023년 8월 정산 안내</a></td>
+                                <td><a href="#">2023-08-25</a></td>
+                                <td class="m-display-none"><a href="#">100</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">3</a></td>
+                                <td><a href="#">2023년 7월 정산 안내</a></td>
+                                <td><a href="#">2023-07-25</a></td>
+                                <td class="m-display-none"><a href="#">100</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">2</a></td>
+                                <td><a href="#">2023년 6월 정산 안내</a></td>
+                                <td><a href="#">2023-06-25</a></td>
+                                <td class="m-display-none"><a href="#">100</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h3 class="license">COPYRIGHTS © 2019 MUSICGATE</h3>
+    </footer>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!--chart.js-->
+    <script src="./js/index.js"></script>
+</body>
+</html>

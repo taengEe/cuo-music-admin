@@ -1,0 +1,348 @@
+/*공용 코드*/
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #333;
+}
+ul{
+    font-size: 0;
+}
+a{
+    text-decoration: none;
+}
+section{
+    padding: 2rem;
+    width: 100%;
+}
+/*header 코드*/
+header{
+    position: relative;
+    z-index: 1;
+    background-color: #252631;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    box-shadow: 0 7px 5px -3px rgba(0, 0, 0, .2);
+}
+header ul{
+    display: flex;
+    font-size: 1rem;
+}
+.hd-util li{
+    margin-right: 2rem;
+}
+.hd-util li:last-child{
+    margin-right: 0;
+}
+.hd-util a{
+    color: #fff;
+}
+.hd-util a>span{
+    color: #89B8FF;
+}
+/*반응형 메뉴*/
+.hd-mb-util{
+    display: none;
+}
+.nav-album-list-box{
+    display: none;
+}
+.nav-setting-box{
+    display: none;
+}
+.hd-mb-util>button{
+    background-color: transparent;
+    border: none;
+}
+.hd-mb-util img{
+    width: 20px;
+    cursor: pointer;
+}
+/*main 코드*/
+main{
+    display: flex;
+    justify-content: flex-start;
+    background-color: #D6E5ED;
+}
+/*nav 코드*/
+nav{
+    display: inline-block;
+    background-color: #252631;
+}
+nav>ul{
+    width: 12rem;
+    padding: 1rem 0 0 0;
+}
+.nav-list{
+    position: relative;
+    padding: 1rem 2rem;
+}
+.nav-selected{
+    background-color: #5574C6;
+    box-shadow: inset 0 3px 4px rgba(0, 0, 0, .2);
+}
+nav a{
+    font-size: 1.3rem;
+    color: #fff;
+}
+.nav-depth{
+    position: relative;
+    display: none;
+    width: 100%;
+    background-color: #525D79;
+}
+
+.nav-depth-list{
+    padding: .7rem 2rem;
+}
+.nav-depth-list-selected{
+    background-color: #3C4866;
+}
+.sc-tt{
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #2B405F;   
+}
+.album-link{
+    font-size: .9rem;
+}
+/*footer 코드*/
+footer{
+    padding: 2rem 0;
+    font-size: .8rem;
+    text-align: center;
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, .05);
+}
+
+/*반응형 pc*/
+@media (min-width: 1024px){
+    nav{
+        display: block !important;
+    }
+    .mb-util-box,
+    .hd-mb-util{
+        display: none;
+    }
+}
+/*tablet*/
+@media (min-width: 768px) and (max-width: 1023px){
+    header{
+        position: sticky;
+        top: 0;
+    }
+    .hd-mb-util{
+        display: block;
+    }
+    .hd-util{
+        display: none;
+    }
+    main{
+        position: relative;
+    }
+    .analy-box{
+        flex-direction: column;
+    }
+    nav{
+        display: none;
+        position: fixed;
+        top: 103px;
+        right: 0;
+        width: 90%;
+        height: 100vh;
+        z-index: 10;
+    }
+    nav>ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    nav ul>li{
+        flex-grow: 1;
+        width: 50%;
+    }
+    .nav-depth-list{
+        width: 100%;
+    }
+    .nav-album-list-box{
+        border-radius: 10px;
+        display: block;
+        margin: 1rem;
+        padding: 1rem;
+        background-color: #525D79;
+    }
+    .nav-album-list-box>ul{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .nav-album-list-box li{
+        width: 50%;
+        padding-bottom: 1rem;
+    }
+    .nav-album-list-box li:last-child,
+    .nav-album-list-box li:nth-child(3){
+        padding-bottom: 0;
+    }
+    .nav-album-list-box a{
+        font-size: 1rem;
+    }
+    .nav-setting-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 35vh;
+        margin: 1rem;
+    }
+    .nav-setting-box li{
+        display: inline-block;
+    }
+    .mb-util-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 10px;
+        margin: 1rem 1rem;
+        background-color: #2B405F;
+        padding: 1rem;
+        text-align: center;
+    }
+    .mb-util{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        padding-bottom: 1rem;
+    }
+    .mb-util>img{
+        margin-right: .5rem;
+    }
+    .mb-util>span{
+        color: #89B8FF;
+    }
+    .mb-sub-util{
+        display: flex;
+        justify-content: space-around;
+        font-size: .6rem;
+        border-top: 1px solid rgba(255,255,255,.5);
+        padding-top: 1rem;
+        
+    }
+    .mb-sub-util a{
+        font-size: 1rem;
+    }
+    /**/
+}
+/*mobile*/
+@media (max-width: 767px) {
+    /*자르기*/
+    header{
+        position: sticky;
+        top: 0;
+    }
+    .hd-mb-util{
+        display: block;
+    }
+    .hd-util{
+        display: none;
+    }
+    main{
+        position: relative;
+    }
+    .analy-box{
+        flex-direction: column;
+    }
+    nav{
+        display: none;
+        position: fixed;
+        top: 103px;
+        right: 0;
+        width: 90%;
+        height: 100vh;
+        z-index: 10;
+    }
+    nav>ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    nav ul>li{
+        flex-grow: 1;
+        width: 50%;
+    }
+    .nav-depth-list{
+        width: 100%;
+    }
+    .nav-album-list-box{
+        border-radius: 10px;
+        display: block;
+        margin: 1rem;
+        padding: 1rem;
+        background-color: #525D79;
+    }
+    .nav-album-list-box>ul{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .nav-album-list-box li{
+        width: 50%;
+        padding-bottom: 1rem;
+    }
+    .nav-album-list-box li:last-child,
+    .nav-album-list-box li:nth-child(3){
+        padding-bottom: 0;
+    }
+    .nav-album-list-box a{
+        font-size: 1rem;
+    }
+    .nav-setting-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 35vh;
+        margin: 1rem;
+    }
+    .nav-setting-box li{
+        display: inline-block;
+    }
+    .mb-util-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 10px;
+        margin: 1rem 1rem;
+        background-color: #2B405F;
+        padding: 1rem;
+        text-align: center;
+    }
+    .mb-util{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        padding-bottom: 1rem;
+    }
+    .mb-util>img{
+        margin-right: .5rem;
+    }
+    .mb-util>span{
+        color: #89B8FF;
+    }
+    .mb-sub-util{
+        display: flex;
+        justify-content: space-around;
+        font-size: .6rem;
+        border-top: 1px solid rgba(255,255,255,.5);
+        padding-top: 1rem;
+        
+    }
+    .mb-sub-util a{
+        font-size: 1rem;
+    }
+    /**/
+}

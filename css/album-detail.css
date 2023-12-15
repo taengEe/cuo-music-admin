@@ -1,0 +1,239 @@
+.info-date-box{
+    display: flex;
+    align-items: center;
+    background-color: #525D79;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    font-size: 0;
+}
+#today{
+    height: 2rem;
+    width: 10rem;
+    padding: 0 1rem;
+    border-radius: 10px 0 0 10px;
+    border: none;
+}
+.info-date-box>button{
+    width: 55px;
+    height: 2rem;
+    background-color: #5574C6;
+    color: #fff;
+    border: none;
+    border-radius: 0 10px 10px 0;
+}
+.date-btn{
+    cursor: pointer;
+}
+/*앨범 사진*/
+.info{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+.info>div{
+}
+.a-album-info{
+    display: flex;
+    margin-right: 2rem;
+}
+.a-album-info>div{
+    flex-grow: 1;
+}
+.a-img{
+    width: 400px;
+    border-radius: 20px;
+    margin-right: 2rem;
+}
+/*앨범 table 코드*/
+.a-info{
+    border-radius: 20px;
+    overflow: hidden;
+    width: auto;
+}
+.a-info>table{
+    background-color: #fff;
+    height: 100%;
+    font-size: 1rem;
+    border-radius: 20px;
+}
+.a-th{
+    background-color: #525D79;
+    color: #fff;
+    padding: 1rem;
+    
+}
+.a-td-data{
+    color: #333;
+    padding: 0 1rem;
+    border-bottom: 1px solid #D6E5ED;
+}
+.td-last-data{
+    border: none;
+}
+.a-date-analy{
+    flex-grow: 2;
+    display: flex;
+    justify-content: space-between;
+}
+.a-date-analy>div{
+    flex-grow: 1;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+}
+.a-date-analy>div:first-child{
+    margin-right: 2rem;
+}
+.sub-sc-tt{
+    font-size: 1.2rem;
+    color: #2B405F;
+    margin-bottom: 1rem;
+}
+.chart-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 음원사별 */
+.seller{
+    display: flex;
+    justify-content: space-between;
+}
+.seller>div{
+    flex-grow: 1;
+    margin-right: 2rem;
+}
+.seller>div:last-child{
+    margin: 0;
+}
+.seller-box{
+    background-color: #fff;
+    border-radius: 20px;
+    text-align: center;
+}
+.seller-logo-cnt-box{
+    height: 70px;
+    padding: 1.5rem 0;
+}
+.seller-all{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #888;
+}
+.seller-logo{
+    margin-bottom: 1rem;
+}
+.seller-all-cnt{
+    font-size: 1.2rem;
+}
+.download-stream{
+    padding: 1.5rem 0;
+    background-color: #525D79;
+    color: #fff;
+    border-radius: 0 0 20px 20px;
+}
+.download-stream>p{
+    margin-bottom: .5rem;
+}
+.download-stream>p:last-child{
+    margin: 0;
+}
+@media (min-width: 768px) and (max-width: 1024px){
+    section{
+        padding: 1rem;
+    }
+    
+    .info-date-box{
+        box-sizing: border-box;
+        width: 100%;
+        display: inline-block;
+    }
+
+    .info{
+        flex-direction: column;
+    }
+    .a-album-info{
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    .a-img-box{
+        width: 35%;
+        margin-right: 2rem;
+    }
+    .a-img{
+        width: 100%;
+        margin: 0;
+    }
+    .a-info table{
+        width: 100%;
+    }
+    .seller{
+        flex-wrap: wrap;
+    }
+    .seller>div{
+        width: 30%;
+        height: 230px;
+        margin: 0 1rem 2rem 0;
+        overflow: hidden;
+    }
+    .genie,
+    .vibe{
+        margin-right: 0 !important;
+        
+    }
+}
+@media (max-width: 767px){
+    section{
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    .info-date-box{
+        box-sizing: border-box;
+        display: inline-block;
+        width: 100%;
+    }
+    .info{
+        width: 100%;
+        flex-direction: column;
+    }
+    .a-album-info{
+        flex-direction: column;
+        margin: 0 0 1rem 0;
+    }
+    .a-img-box{
+        width: 100%;
+        margin-right: 0;
+    }
+    .a-img{
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
+    .a-info>table{
+        width: 100%;
+    }
+    .a-date-analy{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .a-date-analy>div{
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0 0 1rem 0 !important;
+    }
+    .chart-box{
+        width: 100%;
+    }
+    .seller{
+
+        flex-wrap: wrap;
+        
+    }
+    .seller>div{
+        width: 30%;
+        margin: 0 1rem 1rem 0 !important;
+    }
+}

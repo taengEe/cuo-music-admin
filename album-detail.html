@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuo 뮤직 앨범 상세정보</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/hnf.css">
+    <link rel="stylesheet" href="./css/album-detail.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-box">
+            <a href="#">
+                <img src="./imgs/header/cuo-logo.png" alt="" class="logo">
+            </a>
+        </div>
+        <div class="hd-util">
+            <ul>
+                <li><a href="#"><span>김태훈</span>님</a></li>
+                <li><a href="#">로그아웃</a></li>
+                <li><a href="#">개인정보수정</a></li>
+            </ul>
+        </div>
+        <div class="hd-mb-util">
+            <button type="button" class="mb-btn"><img src="./imgs/mobile/nav-mb-btn.png" alt=""></button>
+        </div>
+    </header>
+    <main>
+        <nav>
+            <div class="mb-util-box">
+                <a href="#" class="mb-util"><img src="./imgs/mobile/mb-pt.png" alt=""><span>김태훈</span>님</a>
+                <div class="mb-sub-util">
+                    <a href="#">로그아웃</a>
+                    <a href="#" style="padding: 0;">개인정보 수정</a>
+                </div>
+                <!-- <ul>
+                    <li></li>
+                    <li><a href="#" class="mb-util">로그아웃</a></li>
+                    <li><a href="#" class="mb-util" style="padding: 0;">개인정보 수정</a></li>
+                </ul> -->
+            </div>
+            <ul>
+                <li class="nav-list"><a href="http://davylamp1.dothome.co.kr/admin/index.html" class="nav-link">전체분석</a></li>
+                <li class="nav-list nav-ai">
+                    <a href="#" class="nav-link">
+                        앨범정보
+                    </a>
+                </li>
+                <li class="nav-depth">
+                    <div class="nav-depth-contents">
+                        <ul>
+                            <li class="nav-depth-list"><a href="#" class="album-link">전체 앨범</a></li>
+                            <li class="nav-depth-list"><a href="http://davylamp1.dothome.co.kr/admin/album-detail.html" class="album-link" style="color: #FFFCBE;">허공에 묻는다</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">Insane</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">엊그제</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">Own Star</a></li>
+                            <li class="nav-depth-list"><a href="#" class="album-link">모래성</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-list"><a href="http://davylamp1.dothome.co.kr/admin/calc.html" class="nav-link">정산관리</a></li>
+            </ul>
+            <div class="nav-album-list-box">
+                <ul>
+                    <li><a href="#" class="nav-album-list">허공에 묻는다</a></li>
+                    <li><a href="#" class="nav-album-list">Insane</a></li>
+                    <li><a href="#" class="nav-album-list">엊그제</a></li>
+                    <li><a href="#" class="nav-album-list">Own Star</a></li>
+                </ul>
+            </div>
+            <div class="nav-setting-box">
+                <ul>
+                    <li><a href="#">설정</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="a-detail">
+            <h2 class="sc-tt">앨범정보</h2>
+            <div class="info-date-box">
+                <input type="date" id="today">
+                <button type="button" class="date-btn">조회</button>
+            </div>
+            <div class="info">
+                <div class="a-album-info">
+                    <div class="a-img-box">
+                        <img src="./imgs/album-info/album-cover/music-title-banner.jpg" alt="" class="a-img">
+                    </div>
+                    <div class="a-info">
+                        <table>
+                            <tr>
+                                <td class="a-th">곡코드</td>
+                                <td class="a-td-data">XX0000</td>
+                            </tr>
+                            <tr>
+                                <td class="a-th">곡명</td>
+                                <td class="a-td-data">허공에 묻는다</td>
+                            </tr>
+                            <tr>
+                                <td class="a-th">가수명</td>
+                                <td class="a-td-data">김태훈</td>
+                            </tr>
+                            <tr>
+                                <td class="a-th">앨범명</td>
+                                <td class="a-td-data">허공에 묻는다</td>
+                            </tr>
+                            <tr>
+                                <td class="a-th">발매일</td>
+                                <td class="a-td-data">2020-10-20</td>
+                            </tr>
+                            <tr>
+                                <td class="a-th">Licensor</td>
+                                <td class="a-td-data">HAEN FACTORY</td>
+                            </tr>
+                            <tr>
+                                <td class="a-th">Media</td>
+                                <td class="a-td-data td-last-data">DIGITAL</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="a-date-analy">
+                    <div class="a-month">
+                        <h3 class="sub-sc-tt">금일 사용량</h3>
+                        <div class="chart-box">
+                            <canvas id="day"></canvas>
+                        </div>
+                    </div>
+                    <div class="a-today">
+                        <h3 class="sub-sc-tt">금월 사용량</h3>
+                        <div class="chart-box">
+                            <canvas id="month"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seller">
+                <div class="seller-box">
+                    <div class="seller-logo-cnt-box">
+                        <p class="seller-all">전체</p>
+                        <p class="seller-all-cnt">10,000</p>
+                    </div>
+                    <div class="download-stream">
+                        <p class="download">다운로드 : 5,000</p>
+                        <p class="stream">스트리밍 : 5,000</p>
+                        <div class="other-stream">미분류 : 0</div>
+                    </div>
+                </div>
+                <div class="seller-box">
+                    <div class="seller-logo-cnt-box">
+                        <img src="./imgs/service-logo/melon-logo.png" alt="" class="seller-logo">
+                        <p class="seller-all-cnt">2,000</p>
+                    </div>
+                    <div class="download-stream">
+                        <p class="download">다운로드 : 1,000</p>
+                        <p class="stream">스트리밍 : 1,000</p>
+                        <div class="other-stream">미분류 : 0</div>
+                    </div>
+                </div>
+                <div class="seller-box genie">
+                    <div class="seller-logo-cnt-box">
+                        <img src="./imgs/service-logo/genie-logo.png" alt="" class="seller-logo">
+                        <p class="seller-all-cnt">2,000</p>
+                    </div>
+                    <div class="download-stream">
+                        <p class="download">다운로드 : 1,000</p>
+                        <p class="stream">스트리밍 : 1,000</p>
+                        <div class="other-stream">미분류 : 0</div>
+                    </div>
+                </div>
+                <div class="seller-box">
+                    <div class="seller-logo-cnt-box">
+                        <img src="./imgs/service-logo/bugs-logo.png" alt="" class="seller-logo">
+                        <p class="seller-all-cnt">2,000</p>
+                    </div>
+                    <div class="download-stream">
+                        <p class="download">다운로드 : 1,000</p>
+                        <p class="stream">스트리밍 : 1,000</p>
+                        <div class="other-stream">미분류 : 0</div>
+                    </div>
+                </div>
+                <div class="seller-box">
+                    <div class="seller-logo-cnt-box">
+                        <img src="./imgs/service-logo/flo-logo.png" alt="" class="seller-logo">
+                        <p class="seller-all-cnt">2,000</p>
+                    </div>
+                    <div class="download-stream">
+                        <p class="download">다운로드 : 1,000</p>
+                        <p class="stream">스트리밍 : 1,000</p>
+                        <div class="other-stream">미분류 : 0</div>
+                    </div>
+                </div>
+                <div class="seller-box vibe">
+                    <div class="seller-logo-cnt-box">
+                        <img src="./imgs/service-logo/vibe-logo.png" alt="" class="seller-logo">
+                        <p class="seller-all-cnt">2,000</p>
+                    </div>
+                    <div class="download-stream">
+                        <p class="download">다운로드 : 1,000</p>
+                        <p class="stream">스트리밍 : 1,000</p>
+                        <div class="other-stream">미분류 : 0</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h3 class="license">COPYRIGHTS © 2019 MUSICGATE</h3>
+    </footer>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!--chart.js-->
+    <script src="./js/album-detail.js"></script>
+</body>
+</html>
